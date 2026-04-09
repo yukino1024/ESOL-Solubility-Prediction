@@ -22,7 +22,7 @@ Extracts multi-scale chemical information using **RDKit**:
   **原子级特征**：原子序数、度数、芳香性、杂化轨道等。
 * **Expert Descriptors**: MolLogP (hydrophobicity), TPSA, Molecular Weight, and Valence Electrons.
   
-  **专家描述符**：MolLogP（脂水分配系数）、TPSA、分子量、价电子数等。
+  **描述符**：MolLogP（脂水分配系数）、TPSA、分子量、价电子数等。
 * **Data Packaging**: Converting SMILES into PyTorch Geometric `Data` objects for GNN training.
   
   **数据封装**：将 SMILES 转化为 PyTorch Geometric 的 `Data` 对象，以便 GNN 训练。
@@ -31,15 +31,16 @@ Extracts multi-scale chemical information using **RDKit**:
 Establishes performance benchmarks using classical algorithms on 1D expert features:
 
 利用经典算法在 1D 专家特征上建立性能基准：
-* **Models**: Random Forest (RF) and XGBoost.
+* **Models**: **Random Forest (RF)** and **XGBoost**.
   
-  **模型**：随机森林 (RF) 与 XGBoost。
+  **模型**：**随机森林 (RF)** 与 **XGBoost**。
 * **Insight**: Assessing the predictive power of standardized physicochemical descriptors.
   
   **洞察**：评估经过标准化的物理化学描述符的预测能力。
 
 ### 3. Neural Architecture Exploration | 神经架构探索 (`MLP.ipynb` & `GNN.ipynb`)
 Investigates different deep learning approaches for molecular regression:
+
 研究用于分子回归的不同深度学习方法：
 * **MLP**: Analyzing convergence with global molecular descriptors.
   
