@@ -15,28 +15,37 @@ This project is an **AI4Science** exploration focused on predicting aqueous solu
 
 ### 1. Feature Engineering | 特征工程 (`feature_get.ipynb`)
 Extracts multi-scale chemical information using **RDKit**:
+
 利用 **RDKit** 提取多尺度化学信息：
 * **Atomic Features**: Atomic number, degree, aromaticity, and hybridization.
+
   **原子级特征**：原子序数、度数、芳香性、杂化轨道等。
 * **Expert Descriptors**: MolLogP (hydrophobicity), TPSA, Molecular Weight, and Valence Electrons.
+  
   **专家描述符**：MolLogP（脂水分配系数）、TPSA、分子量、价电子数等。
 * **Data Packaging**: Converting SMILES into PyTorch Geometric `Data` objects for GNN training.
+  
   **数据封装**：将 SMILES 转化为 PyTorch Geometric 的 `Data` 对象，以便 GNN 训练。
 
 ### 2. Machine Learning Baselines | 机器学习基准 (`machine_learning.ipynb`)
 Establishes performance benchmarks using classical algorithms on 1D expert features:
+
 利用经典算法在 1D 专家特征上建立性能基准：
 * **Models**: Random Forest (RF) and XGBoost.
+  
   **模型**：随机森林 (RF) 与 XGBoost。
 * **Insight**: Assessing the predictive power of standardized physicochemical descriptors.
+  
   **洞察**：评估经过标准化的物理化学描述符的预测能力。
 
 ### 3. Neural Architecture Exploration | 神经架构探索 (`MLP.ipynb` & `GNN.ipynb`)
 Investigates different deep learning approaches for molecular regression:
 研究用于分子回归的不同深度学习方法：
 * **MLP**: Analyzing convergence with global molecular descriptors.
+  
   **MLP**：基于全局分子描述符分析模型的收敛性。
 * **Hybrid GNN**: Implementing a **GCN** (Graph Convolutional Network) architecture that fuses learned graph embeddings with expert $u$ features.
+  
   **混合 GNN**：实现基于 **GCN**（图卷积网络）的架构，将学习到的图嵌入与专家特征 $u$ 进行融合。
 
 
