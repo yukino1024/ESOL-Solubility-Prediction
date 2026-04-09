@@ -1,6 +1,3 @@
-这里是为你准备的 README.md 的完整 Markdown 源码。你可以直接复制并粘贴到你 GitHub 仓库的 README.md 文件中。
-
-Markdown
 # ESOL-Solubility-Prediction: A Comparative Study of ML & GNN
 # ESOL溶解度预测：机器学习与图神经网络的对比研究
 
