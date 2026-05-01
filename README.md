@@ -70,10 +70,19 @@ By comparing model performances across different solubility ranges, we observed 
     * **Pure GNN ($\log S < -6$)**: Struggled with poorly soluble molecules. Without explicit physical constraints, structural embeddings alone failed to capture the extreme hydrophobic effects of large, rigid aromatic systems.
       
       **纯 GNN ($\log S < -6$)**：在难溶分子上表现较差。在缺乏显式物理约束的情况下，仅靠结构嵌入难以捕捉大型刚性芳香体系的极端疏水效应。
+
+<div align="center">
+  <img src="./picture/GNN.png" width="400px" alt="GNN">
+</div>
+
   
     * **Expert Descriptors ($\log S > 0$)**: Showed higher error rates for highly soluble molecules. Simple physicochemical averages (like LogP) lack the structural granularity to account for specific solvation and hydrogen bonding patterns.
       
       **专家描述符 ($\log S > 0$)**：在高溶分子上误差较大。简单的理化加和（如 LogP）缺乏足够的结构细粒度来描述特定的溶剂化效应和氢键模式。
+
+  <div align="center">
+  <img src="./picture/MLP.png" width="400px" alt="MLP">
+</div>
 
 * **The Hybrid Advantage | 混合模型的优势**:
     * **Fusion Logic**: The Hybrid GNN fuses global **Physicochemical Descriptors** with local **Graph Embeddings**.
@@ -82,6 +91,10 @@ By comparing model performances across different solubility ranges, we observed 
     * **Synergy**: Descriptors provide a "physical floor" for hydrophobicity (improving low solubility prediction), while the GNN captures subtle structural variations (refining high solubility prediction), leading to robust performance across the entire range.
       
       **协同效应**：描述符为疏水性提供了“物理底线”（优化了低溶解度预测），而 GNN 捕捉了微妙的结构变化（细化了高溶解度预测），从而实现了全量程的鲁棒表现。
+
+      <div align="center">
+  <img src="./picture/Hybird_GNN.png" width="400px" alt="Hybrid GNN">
+</div>
 
 ---
 
