@@ -18,9 +18,9 @@ Extracts multi-scale chemical information using **RDKit**:
   
   **图特征**：原子连接状态与对应原子的原子序数、度数、芳香性、杂化轨道等。
   
-* **Expert Descriptors**: MolLogP (hydrophobicity), TPSA, Molecular Weight, and Valence Electrons.
+* **Expert Descriptors**: Calculation of MolLogP (hydrophobicity), TPSA, Molecular Weight, and Valence Electrons, followed by **Max-Min Normalization**.
   
-  **专家描述符**：MolLogP（脂水分配系数）、TPSA、分子量、价电子数等。
+  **专家描述符**：计算 MolLogP（脂水分配系数）、TPSA、分子量、价电子数等，并进行 **Max-Min 归一化**。
   
 * **Data Packaging**: Encapsulating data for use in subsequent sections.
   
