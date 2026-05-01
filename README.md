@@ -50,7 +50,7 @@ Investigates different deep learning approaches for solubility prediction:
   
   **MLP**：基于全局分子描述符的预测。
   
-  **GNN**: Graph Convolutional Network prediction based on molecular graph features.
+* **GNN**: Graph Convolutional Network prediction based on molecular graph features.
 
   **GNN**：基于分子图特征的图卷积网络预测
   
