@@ -1,10 +1,10 @@
 # ESOL-Solubility-Prediction: A Comparative Study of ML & GNN
-# ESOL溶解度预测：机器学习与图神经网络的对比研究
+# ESOL 溶解度预测：机器学习与图神经网络的对比研究
 
 ## 🔬 Project Overview | 项目概览
-This project is an **AI4Science** exploration focused on predicting aqueous solubility using the **ESOL (Delaney)** dataset. The core objective is to evaluate the synergy between traditional chemical domain knowledge and modern representation learning.
+This project is an **AI4Science** exploration focused on predicting aqueous solubility ($\log S$) using the **ESOL (Delaney)** dataset[cite: 1]. The core objective is to evaluate the synergy between traditional chemical domain knowledge (Expert Descriptors) and modern representation learning (Graph Neural Networks)
 
-本项目是一个 **AI4Science** 探索项目，旨在利用 **ESOL (Delaney)** 数据集预测分子的水溶性。核心目标是评估传统化学领域知识与现代表征学习之间的协同作用。
+本项目是一个 **AI4Science** 探索项目，旨在利用 **ESOL (Delaney)** 数据集预测分子的水溶性 ($\log S$)。核心目标是评估传统化学领域知识（专家描述符）与现代表征学习（图神经网络）之间的协同作用。
 
 ---
 
@@ -12,41 +12,50 @@ This project is an **AI4Science** exploration focused on predicting aqueous solu
 
 ### 1. Feature Engineering | 特征工程 (`feature_get.ipynb`)
 Extracts multi-scale chemical information using **RDKit**:
-
 利用 **RDKit** 提取多尺度化学信息：
-* **Atomic Features**: Atomic number, degree, aromaticity, and hybridization.
-
-  **原子级特征**：原子序数、度数、芳香性、杂化轨道等。
+* **Graph Features**: Atomic connectivity states and corresponding atomic properties such as atomic number, degree, aromaticity, and hybridization.
+  **图特征**：原子连接状态与对应原子的原子序数、度数、芳香性、杂化轨道等。
 * **Expert Descriptors**: MolLogP (hydrophobicity), TPSA, Molecular Weight, and Valence Electrons.
-  
-  **描述符**：MolLogP（脂水分配系数）、TPSA、分子量、价电子数等。
-* **Data Packaging**: Converting SMILES into PyTorch Geometric `Data` objects for GNN training.
-  
-  **数据封装**：将 SMILES 转化为 PyTorch Geometric 的 `Data` 对象，以便 GNN 训练。
+  **专家描述符**：MolLogP（脂水分配系数）、TPSA、分子量、价电子数等。
+* **Data Packaging**: Encapsulating data for use in subsequent sections.
+  **数据封装**：将数据封装供后续部分使用。
 
-### 2. Machine Learning Baselines | 机器学习基准 (`machine_learning.ipynb`)
+### 2. Machine Learning Baselines | 机器学习基准 (`ML.ipynb`)
 Establishes performance benchmarks using classical algorithms on 1D expert features:
-
 利用经典算法在 1D 专家特征上建立性能基准：
 * **Models**: **Random Forest (RF)** and **XGBoost**.
-  
   **模型**：**随机森林 (RF)** 与 **XGBoost**。
 * **Insight**: Assessing the predictive power of physicochemical descriptors.
-  
   **洞察**：评估物理化学描述符的预测能力。
 
 ### 3. Neural Architecture Exploration | 神经架构探索 (`MLP.ipynb` & `GNN.ipynb`)
 Investigates different deep learning approaches for molecular regression:
-
 研究用于分子回归的不同深度学习方法：
-* **MLP**: Analyzing convergence with global molecular descriptors.
-  
-  **MLP**：基于全局分子描述符分析模型的收敛性。
-* **Hybrid GNN**: Implementing a **GCN** (Graph Convolutional Network) architecture that fuses learned graph embeddings with Physicochemical properties.
-  
+* **MLP**: Prediction based on global molecular descriptors.
+  **MLP**：基于全局分子描述符的预测。
+  **GNN**: Graph Convolutional Network prediction based on molecular graph features.
+  **GNN**：基于分子图特征的图卷积网络预测
+* **Hybrid GNN**: Implementing a **GCN** (Graph Convolutional Network) architecture that fuses learned graph embeddings with physicochemical properties.
   **混合 GNN**：实现基于 **GCN**（图卷积网络）的架构，将学习到的图嵌入与物理化学特征进行融合。
 
+---
 
+## 💡 Key Insights | 核心发现
+
+By comparing model performances across different solubility ranges, we observed a significant **Synergistic Effect** in the Hybrid GNN architecture:
+通过对比不同溶解度范围的模型表现，我们在混合 GNN 架构中观察到了显著的**协同效应**：
+
+* **Limitations of Single Approaches | 单一方法的局限性**:
+    * **Pure GNN ($\log S < -6$)**: Struggled with poorly soluble molecules[cite: 1]. Without explicit physical constraints, structural embeddings alone failed to capture the extreme hydrophobic effects of large, rigid aromatic systems.
+      **纯 GNN ($\log S < -6$)**：在难溶分子上表现较差。在缺乏显式物理约束的情况下，仅靠结构嵌入难以捕捉大型刚性芳香体系的极端疏水效应。
+    * **Expert Descriptors ($\log S > 0$)**: Showed higher error rates for highly soluble molecules. Simple physicochemical averages (like LogP) lack the structural granularity to account for specific solvation and hydrogen bonding patterns.
+      **专家描述符 ($\log S > 0$)**：在高溶分子上误差较大。简单的理化加和（如 LogP）缺乏足够的结构细粒度来描述特定的溶剂化效应和氢键模式。
+
+* **The Hybrid Advantage | 混合模型的优势**:
+    * **Fusion Logic**: The Hybrid GNN fuses global **Physicochemical Descriptors** with local **Graph Embeddings**.
+      **融合逻辑**：混合 GNN 将全局**物理化学描述符**与局部**图嵌入**相结合。
+    * **Synergy**: Descriptors provide a "physical floor" for hydrophobicity (improving low solubility prediction), while the GNN captures subtle structural variations (refining high solubility prediction), leading to robust performance across the entire range.
+      **协同效应**：描述符为疏水性提供了“物理底线”（优化了低溶解度预测），而 GNN 捕捉了微妙的结构变化（细化了高溶解度预测），从而实现了全量程的鲁棒表现。
 
 ---
 
