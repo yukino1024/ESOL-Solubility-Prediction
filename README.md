@@ -66,8 +66,8 @@ By comparing model performances across different solubility ranges, we observed 
 
 通过对比不同溶解度范围的模型表现，我们在混合 GNN 架构中观察到了显著的**协同效应**：
 
-**Limitations of Single Approaches | 单一方法的局限性**:
-    * **Pure GNN ($\log S < -6$)**: Struggled with poorly soluble molecules. Without explicit physical constraints, structural embeddings alone failed to capture the extreme hydrophobic effects of large, rigid aromatic systems.
+### **Limitations of Single Approaches | 单一方法的局限性**:
+  * **Pure GNN ($\log S < -6$)**: Struggled with poorly soluble molecules. Without explicit physical constraints, structural embeddings alone failed to capture the extreme hydrophobic effects of large, rigid aromatic systems.
       
   **纯 GNN ($\log S < -6$)**：在难溶分子上表现较差。在缺乏显式物理约束的情况下，仅靠结构嵌入难以捕捉大型刚性芳香体系的极端疏水效应。
 
@@ -84,13 +84,13 @@ By comparing model performances across different solubility ranges, we observed 
   <img src="./picture/MLP.png" width="400px" alt="MLP">
 </div>
 
-* **The Hybrid Advantage | 混合模型的优势**:
-    * **Fusion Logic**: The Hybrid GNN fuses global **Physicochemical Descriptors** with local **Graph Embeddings**.
+### **The Hybrid Advantage | 混合模型的优势**:
+* **Fusion Logic**: The Hybrid GNN fuses global **Physicochemical Descriptors** with local **Graph Embeddings**.
       
-      **融合逻辑**：混合 GNN 将全局**物理化学描述符**与局部**图嵌入**相结合。
-    * **Synergy**: Descriptors provide a "physical floor" for hydrophobicity (improving low solubility prediction), while the GNN captures subtle structural variations (refining high solubility prediction), leading to robust performance across the entire range.
+   **融合逻辑**：混合 GNN 将全局**物理化学描述符**与局部**图嵌入**相结合。
+* **Synergy**: Descriptors provide a "physical floor" for hydrophobicity (improving low solubility prediction), while the GNN captures subtle structural variations (refining high solubility prediction), leading to robust performance across the entire range.
       
-      **协同效应**：描述符为疏水性提供了“物理底线”（优化了低溶解度预测），而 GNN 捕捉了微妙的结构变化（细化了高溶解度预测），从而实现了全量程的鲁棒表现。
+   **协同效应**：描述符为疏水性提供了“物理底线”（优化了低溶解度预测），而 GNN 捕捉了微妙的结构变化（细化了高溶解度预测），从而实现了全量程的鲁棒表现。
 
 <div align="center">
   <img src="./picture/Hybrid_GNN.png" width="400px" alt="Hybrid GNN">
