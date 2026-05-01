@@ -75,7 +75,7 @@ By comparing model performances across different solubility ranges, we observed 
   <img src="./picture/GNN.png" width="400px" alt="GNN">
 </div>
 
-* **Expert Descriptors ($\log S > 0$)**: Showed higher error rates for highly soluble molecules. Simple physicochemical averages (like LogP) lack the structural granularity to account for specific solvation and hydrogen bonding patterns.
+  * **Expert Descriptors ($\log S > 0$)**: Showed higher error rates for highly soluble molecules. Simple physicochemical averages (like LogP) lack the structural granularity to account for specific solvation and hydrogen bonding patterns.
       
     **专家描述符 ($\log S > 0$)**：在高溶分子上误差较大。简单的理化加和（如 LogP）缺乏足够的结构细粒度来描述特定的溶剂化效应和氢键模式。
 
