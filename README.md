@@ -92,8 +92,8 @@ By comparing model performances across different solubility ranges, we observed 
       
       **协同效应**：描述符为疏水性提供了“物理底线”（优化了低溶解度预测），而 GNN 捕捉了微妙的结构变化（细化了高溶解度预测），从而实现了全量程的鲁棒表现。
 
-      <div align="center">
-  <img src="./picture/Hybird_GNN.png" width="400px" alt="Hybrid GNN">
+<div align="center">
+  <img src="./picture/Hybrid_GNN.png" width="400px" alt="GNN">
 </div>
 
 ---
