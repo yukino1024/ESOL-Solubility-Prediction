@@ -69,7 +69,7 @@ By comparing model performances across different solubility ranges, we observed 
 ### **Limitations of Single Approaches | 单一方法的局限性**:
   * **Pure GNN ($\log S < -6$)**: Struggled with poorly soluble molecules. Without explicit physical constraints, structural embeddings alone failed to capture the extreme hydrophobic effects of large, rigid aromatic systems.
       
-  **纯 GNN ($\log S < -6$)**：在难溶分子上表现较差。在缺乏显式物理约束的情况下，仅靠结构嵌入难以捕捉大型刚性芳香体系的极端疏水效应。
+    **纯 GNN ($\log S < -6$)**：在难溶分子上表现较差。在缺乏显式物理约束的情况下，仅靠结构嵌入难以捕捉大型刚性芳香体系的极端疏水效应。
 
 <div align="center">
   <img src="./picture/GNN.png" width="400px" alt="GNN">
