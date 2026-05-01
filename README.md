@@ -2,7 +2,7 @@
 # ESOL 溶解度预测：机器学习与图神经网络的对比研究
 
 ## 🔬 Project Overview | 项目概览
-This project is an **AI4Science** exploration focused on predicting aqueous solubility ($\log S$) using the **ESOL (Delaney)** dataset[cite: 1]. The core objective is to evaluate the synergy between traditional chemical domain knowledge (Expert Descriptors) and modern representation learning (Graph Neural Networks)
+This project is an **AI4Science** exploration focused on predicting aqueous solubility ($\log S$) using the **ESOL (Delaney)** dataset. The core objective is to evaluate the synergy between traditional chemical domain knowledge (Expert Descriptors) and modern representation learning (Graph Neural Networks)
 
 本项目是一个 **AI4Science** 探索项目，旨在利用 **ESOL (Delaney)** 数据集预测分子的水溶性 ($\log S$)。核心目标是评估传统化学领域知识（专家描述符）与现代表征学习（图神经网络）之间的协同作用。
 
