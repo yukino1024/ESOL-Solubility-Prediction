@@ -34,11 +34,12 @@ Establishes performance benchmarks using classical algorithms on 1D expert featu
 * **Models**: **Random Forest (RF)** and **XGBoost**.
   
   **模型**：**随机森林 (RF)** 与 **XGBoost**。
+  
 * **Insight**: Assessing the predictive power of physicochemical descriptors.
   
   **洞察**：评估物理化学描述符的预测能力。
 
-### 3. Neural Architecture Exploration | 神经架构探索 (`MLP.ipynb` & `GNN.ipynb`)
+### 3. Neural Architecture Exploration | 神经架构探索 (`MLP.ipynb` & `GNN.ipynb` & `Hybrid_GNN.ipynb`)
 
 Investigates different deep learning approaches for molecular regression:
 
@@ -51,6 +52,7 @@ Investigates different deep learning approaches for molecular regression:
   **GNN**: Graph Convolutional Network prediction based on molecular graph features.
 
   **GNN**：基于分子图特征的图卷积网络预测
+  
 * **Hybrid GNN**: Implementing a **GCN** (Graph Convolutional Network) architecture that fuses learned graph embeddings with physicochemical properties.
   
   **混合 GNN**：实现基于 **GCN**（图卷积网络）的架构，将学习到的图嵌入与物理化学特征进行融合。
