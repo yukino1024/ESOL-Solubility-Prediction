@@ -27,6 +27,7 @@ Extracts multi-scale chemical information using **RDKit**:
   **数据封装**：将数据封装供后续部分使用。
 
 ### 2. Machine Learning Baselines | 机器学习基准 (`ML.ipynb`)
+
 Establishes performance benchmarks using classical algorithms on 1D expert features:
 
 利用经典算法在 1D 专家特征上建立性能基准：
@@ -39,11 +40,11 @@ Establishes performance benchmarks using classical algorithms on 1D expert featu
   
   **洞察**：评估物理化学描述符的预测能力。
 
-### 3. Neural Architecture Exploration | 神经架构探索 (`MLP.ipynb` & `GNN.ipynb` & `Hybrid_GNN.ipynb`)
+### 3. Neural Network Architecture Exploration | 神经网络架构探索 (`MLP.ipynb` & `GNN.ipynb` & `Hybrid_GNN.ipynb`)
 
-Investigates different deep learning approaches for molecular regression:
+Investigates different deep learning approaches for solubility prediction:
 
-研究用于分子回归的不同深度学习方法：
+研究用于溶解度预测的不同深度学习方法：
 
 * **MLP**: Prediction based on global molecular descriptors.
   
@@ -66,7 +67,7 @@ By comparing model performances across different solubility ranges, we observed 
 通过对比不同溶解度范围的模型表现，我们在混合 GNN 架构中观察到了显著的**协同效应**：
 
 * **Limitations of Single Approaches | 单一方法的局限性**:
-    * **Pure GNN ($\log S < -6$)**: Struggled with poorly soluble molecules[cite: 1]. Without explicit physical constraints, structural embeddings alone failed to capture the extreme hydrophobic effects of large, rigid aromatic systems.
+    * **Pure GNN ($\log S < -6$)**: Struggled with poorly soluble molecules. Without explicit physical constraints, structural embeddings alone failed to capture the extreme hydrophobic effects of large, rigid aromatic systems.
       
       **纯 GNN ($\log S < -6$)**：在难溶分子上表现较差。在缺乏显式物理约束的情况下，仅靠结构嵌入难以捕捉大型刚性芳香体系的极端疏水效应。
   
