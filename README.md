@@ -46,9 +46,9 @@ Investigates different deep learning approaches for solubility prediction:
 
 研究用于溶解度预测的不同深度学习方法：
 
-* **MLP**: Prediction based on physicochemical descriptors.
+* **MLP**: Multilayer perceptron prediction based on physicochemical descriptors..
   
-  **MLP**：基于物理化学描述符的预测。
+  **MLP**：基于物理化学描述符的多层感知机预测。
   
 * **GNN**: Graph Convolutional Network prediction based on molecular graph features.
 
