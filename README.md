@@ -77,7 +77,7 @@ By comparing model performances across different solubility ranges, we observed 
 
   * **Expert Descriptors ($\log S > 0$)**: Showed higher error rates for highly soluble molecules. Simple physicochemical averages (like LogP) lack the structural granularity to account for specific solvation and hydrogen bonding patterns.(The sample size for highly soluble molecules is relatively small; a clear trend can be observed in the upper-right portion above the ideal line where predicted values tend to avoid exceeding 0)
       
-    **专家描述符 ($\log S > 0$)**：在高溶分子上误差较大。简单的理化加和（如 LogP）缺乏足够的结构细粒度来描述特定的溶剂化效应和氢键模式。（高溶分子样本量较少，再理想线右上部分可看到预测值有避免大于0的趋势）
+    **专家描述符 ($\log S > 0$)**：在高溶分子上误差较大。简单的理化加和（如 LogP）缺乏足够的结构细粒度来描述特定的溶剂化效应和氢键模式。（高溶分子样本量较少，在理想线右上部分可看到预测值有避免大于0的趋势）
 
 
   <div align="center">
