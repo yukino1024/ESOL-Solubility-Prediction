@@ -14,9 +14,9 @@ This project is an **AI4Science** exploration focused on predicting aqueous solu
 Extracts multi-scale chemical information using **RDKit**:
 
 利用 **RDKit** 提取多尺度化学信息：
-* **Graph Features**: Atomic connectivity states and corresponding atomic properties:  atomic number, degree, aromaticity, and hybridization（**Max-Min Normalization**）.
+* **Graph Features**: Atomic connectivity states and corresponding atomic properties:  atomic number, degree and aromaticity（**Max-Min Normalization**）.
   
-  **图特征**：原子连接状态与对应原子的原子序数、度数、芳香性、杂化轨道（**Max-Min 归一化**）。
+  **图特征**：原子连接状态与对应原子的原子序数、度数、芳香性（**Max-Min 归一化**）。
   
 * **Expert Descriptors**: Calculation of MolLogP (hydrophobicity), TPSA, Molecular Weight, and Valence Electrons, followed by **Max-Min Normalization**.
   
@@ -46,9 +46,9 @@ Investigates different deep learning approaches for solubility prediction:
 
 研究用于溶解度预测的不同深度学习方法：
 
-* **MLP**: Prediction based on global molecular descriptors.
+* **MLP**: Prediction based on physicochemical descriptors.
   
-  **MLP**：基于全局分子描述符的预测。
+  **MLP**：基于物理化学描述符的预测。
   
 * **GNN**: Graph Convolutional Network prediction based on molecular graph features.
 
