@@ -98,6 +98,30 @@ By comparing model performances across different solubility ranges, we observed 
 
 ---
 
+## 🧪 Ablation Studies | 消融实验
+
+To validate the contribution of specific components within our architecture and data processing pipeline, we conducted ablation studies:
+
+为了验证架构和数据处理流程中特定组件的贡献，我们进行了消融实验：
+
+###  Feature Source Ablation (GNN vs. MLP vs. Hybrid) | 特征源消融
+By isolating the feature sources:
+* **Only Graph Features (GNN)**: Failed to capture explicit global thermodynamic properties like LogP, leading to poor predictions for highly insoluble compounds.
+* **Only Expert Descriptors (MLP)**: Lacked the structural topology information needed to distinguish complex spatial configurations or specific hydrogen-bond networks.
+* **Conclusion**: The hybrid approach (Graph + Descriptors) is strictly necessary to bridge the gap between microscopic structural variations and macroscopic physicochemical properties.
+
+  通过隔离特征源：
+* **仅图特征 (GNN)**：未能捕捉 LogP 等显式的全局热力学属性，导致极难溶化合物的预测效果差。
+* **仅专家描述符 (MLP)**：缺乏区分复杂空间构型或特定氢键网络所需的拓扑结构信息。
+* **结论**：混合方法（图特征 + 描述符）对于弥合微观结构变化与宏观理化性质之间的鸿沟是必不可少的。
+
+。
+* **结果**：
+**纯GNN Baseline**:  RMSE: 0.7433, MAE: 0.5670
+**纯描述符 MLP**:  RMSE: 0.6987, MAE: 0.5384
+**混合特征 Hybrid**: RMSE: 0.6718, MAE: 0.4965
+---
+
 ## 🛠️ Tech Stack | 技术栈
 * **Cheminformatics (化学信息学)**: RDKit
 * **Deep Learning (深度学习)**: PyTorch, PyTorch Geometric (PyG)
