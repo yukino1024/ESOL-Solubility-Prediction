@@ -117,9 +117,13 @@ By isolating the feature sources:
 
 。
 * **结果**：
+  
 **纯GNN Baseline**:  RMSE: 0.7433, MAE: 0.5670
+
 **纯描述符 MLP**:  RMSE: 0.6987, MAE: 0.5384
+
 **混合特征 Hybrid**: RMSE: 0.6718, MAE: 0.4965
+
 ---
 
 ## 🛠️ Tech Stack | 技术栈
