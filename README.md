@@ -124,6 +124,10 @@ By isolating the feature sources:
 
 **混合特征 Hybrid**: RMSE: 0.6718, MAE: 0.4965
 
+<div align="center">
+  <img src="./picture/Ablation_Studies.png" width="400px" alt="Ablation_Studies">
+</div>
+
 ---
 
 ## 🛠️ Tech Stack | 技术栈
